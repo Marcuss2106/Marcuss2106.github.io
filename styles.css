@@ -1,16 +1,22 @@
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: darkslategrey;
 }
 
 h1 {
     text-align: center;
-    color: #2F36E0;
+    
 }
 
 h2 {
     text-align: center;
-    color: #2FA6E0;
+    color: #ffffff;
+    background: darkslategrey;
 }
 
 .about {
@@ -22,9 +28,18 @@ h2 {
 }
 
 .projects {
-
+    display:flex;
+    flex-wrap:wrap;
+}
+.project {
+    width: 30%;
+    margin: 10px;
+    padding: 20px 10px;
+    background: white;
+    border-radius: 25%;
 }
 
+
 .contact {
-    
+   background-color: darkslategrey;
 }
