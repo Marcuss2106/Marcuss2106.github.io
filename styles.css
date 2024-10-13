@@ -19,6 +19,11 @@ h2 {
     background: darkslategrey;
 }
 
+a {
+    text-decoration: none;
+    color: purple;
+}
+
 .about {
 
 }
@@ -39,6 +44,20 @@ h2 {
     border-radius: 25%;
 }
 
+.project img{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 2px solid rgb(126, 14, 201); /* choose a color */
+    display: block;
+    margin: auto;
+}
+
+.project p {
+    text-align: center;
+    margin: 15px;
+}
+    
 
 .contact {
    background-color: darkslategrey;
