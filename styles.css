@@ -57,14 +57,14 @@ a {
 .project {
     width: 30%;
     margin: 10px;
-    padding: 20px 10px;
     background: white;
     border-radius: 25%;
 }
 
 .project img{
-    width: 300px;
-    height: 300px;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
     margin: 10px;
     border: 2px solid rgb(126, 14, 201); /* choose a color */
     display: block;
@@ -75,7 +75,7 @@ a {
     text-align: center;
     margin: 15px;
 }
-    
+
 
 .contact {
    background-color: darkslategrey;
