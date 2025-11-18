@@ -27,7 +27,7 @@ const About: React.FC = () => {
 				<div className="w-full lg:w-1/3 flex justify-center lg:justify-end">
 					<div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full p-1.5 bg-gradient-to-br from-purple-600 to-indigo-800 glow-shadow">
 						<img
-							src="../assets/me.jpg"
+							src="/me.jpg"
 							alt="Marcus Sostak"
 							className="w-full h-full rounded-full object-cover object-top border-4 border-slate-900"
 						/>
