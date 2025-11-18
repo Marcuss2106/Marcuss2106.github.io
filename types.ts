@@ -5,6 +5,7 @@ export interface ExperienceItem {
   company: string;
   description: string;
   tags: string[];
+  liveUrl?: string;
 }
 
 export interface Project {

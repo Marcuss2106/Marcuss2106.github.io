@@ -37,7 +37,6 @@ const GlowCard: React.FC<GlowCardProps> = ({ children, className = '' }) => {
       onMouseLeave={handleMouseLeave}
       className={`relative overflow-hidden rounded-xl border border-slate-800 bg-slate-900/50 backdrop-blur-sm transition-colors duration-300 hover:border-slate-700 group ${className}`}
     >
-      {/* Glowing spotlight effect */}
       <div
         className="pointer-events-none absolute -inset-px transition-opacity duration-300"
         style={{
@@ -46,7 +45,6 @@ const GlowCard: React.FC<GlowCardProps> = ({ children, className = '' }) => {
         }}
       />
       
-      {/* Border Glow */}
        <div
         className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
@@ -59,7 +57,6 @@ const GlowCard: React.FC<GlowCardProps> = ({ children, className = '' }) => {
         }}
       />
 
-      {/* Particle Effects (Simple CSS bubbles) */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
          <div className="absolute bottom-0 left-1/4 w-1 h-1 bg-purple-400 rounded-full animate-particle" style={{ animationDelay: '0s', animationDuration: '2s' }}></div>
          <div className="absolute bottom-0 left-1/2 w-1.5 h-1.5 bg-indigo-400 rounded-full animate-particle" style={{ animationDelay: '0.5s', animationDuration: '3s' }}></div>

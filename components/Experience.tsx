@@ -1,6 +1,7 @@
 import React from 'react';
 import type { ExperienceItem } from '../types';
 import GlowCard from './GlowCard';
+import ExternalLinkIcon from './icons/ExternalLinkIcon';
 
 const experienceData: ExperienceItem[] = [
 	{
@@ -10,6 +11,7 @@ const experienceData: ExperienceItem[] = [
 		description:
 			'Developed an interactive word-learning platform using RedwoodJS, React, GraphQL, and Rive animations. Collaborated with a team to optimise usability, design, and data workflows. Authored documentation and proposed roadmap for AI-driven personalization, enabling dialect-aware features.',
 		tags: ['React', 'TypeScript', 'RedwoodJS', 'Tailwind CSS', 'Storybook', 'GraphQL', 'Rive'],
+		liveUrl: 'https://wordification.scholastechnology.com/',
 	},
 ];
 
@@ -47,6 +49,18 @@ const Experience: React.FC = () => {
 										</li>
 									))}
 								</ul>
+								<div className="flex items-center space-x-4 mt-6">
+									{item.liveUrl && (
+										<a
+											href={item.liveUrl}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-slate-400 hover:text-purple-400 transition-colors duration-300 z-20"
+										>
+											<ExternalLinkIcon className="w-5 h-5" />
+										</a>
+									)}
+								</div>
 							</div>
 						</div>
 					</GlowCard>

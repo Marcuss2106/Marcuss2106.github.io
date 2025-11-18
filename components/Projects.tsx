@@ -6,29 +6,30 @@ import ExternalLinkIcon from './icons/ExternalLinkIcon';
 import GlowCard from './GlowCard';
 
 const projectData: Project[] = [
-  {
-    title: 'LocaLM',
-    description: 'Developed a team-led startup in 24 hours for a local language model application enabling users to run and interact with custom  models on their own machines without relying on external APIs.',
-    imageUrl: 'https://picsum.photos/seed/project1/400/300',
-    tags: ['React', 'PyTorch', 'Tailwind CSS', 'Vite'],
-    liveUrl: '#',
-    githubUrl: '#'
-  },
-  {
-    title: 'Dialect Classifier App',
-    description: 'Developed a full-stack web app for real-time dialect classification, capturing microphone input and metadata. Built a data collection pieline supporting 500+ potential ML training samples, and a modular backend architecture containg preprocessing and feature extraction for future AI integration.',
-    imageUrl: 'https://picsum.photos/seed/project2/400/300',
-    tags: ['React', 'Python', 'FastAPI', 'Supabase', 'PyTorch'],
-    githubUrl: '#'
-  },
-  {
-    title: 'GTZAN Binary Classification with Linear Models',
-    description: 'Implemented three linear machine learning classifiers to investigate learning dynamics and convergence behavior. Analayzed 1000+ audio feature samples and produced 7+ visualizations informing insights on model accuracy and boundary precision for future audio classifcation.',
-    imageUrl: 'https://picsum.photos/seed/project3/400/300',
-    tags: ['Python', 'Pandas', 'Matplotlib', 'Numpy'],
-    liveUrl: '#',
-    githubUrl: '#'
-  }
+	{
+		title: 'LocaLM',
+		description:
+			'Developed a student-led startup in 24 hours for a local language model application enabling users to run and interact with custom models on their own machines without relying on external APIs.',
+		imageUrl: '../assets/localm.png',
+		tags: ['React', 'PyTorch', 'Tailwind CSS', 'Vite'],
+		githubUrl: 'https://github.com/MichStew/locaLM',
+        liveUrl: 'https://localm-de7priduj-marcuss2106s-projects.vercel.app/',
+	},
+	{
+		title: 'Dialect Classifier App',
+		description:
+			'Developed a full-stack web app for real-time dialect classification, capturing microphone input and metadata. Built a data collection pieline supporting 500+ potential ML training samples, and a modular backend architecture containg preprocessing and feature extraction for future AI integration.',
+		imageUrl: '../assets/accentme.png',
+		tags: ['React', 'Python', 'FastAPI', 'Supabase', 'PyTorch'],
+	},
+	{
+		title: 'GTZAN Binary Classification with Linear Models',
+		description:
+			'Implemented three linear machine learning classifiers to investigate learning dynamics and convergence behavior. Analayzed 1000+ audio feature samples and produced 7+ visualizations informing insights on model accuracy and boundary precision for future audio classifcation.',
+		imageUrl: '../assets/full_figure.png',
+		tags: ['Python', 'Pandas', 'Matplotlib', 'Numpy', 'Jupyter'],
+		githubUrl: 'https://github.com/Marcuss2106/gtzan-classification',
+	},
 ];
 
 const Projects: React.FC = () => {

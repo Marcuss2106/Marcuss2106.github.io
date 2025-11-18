@@ -4,18 +4,18 @@ import type { Skill } from '../types';
 import GlowCard from './GlowCard';
 
 const skillsData: Skill[] = [
-  { name: 'TypeScript' },
-  { name: 'JavaScript (ES6+)' },
+  { name: 'Python' },
   { name: 'React' },
-  { name: 'Next.js' },
-  { name: 'Node.js' },
-  { name: 'Tailwind CSS' },
+  { name: 'Java' },
   { name: 'GraphQL' },
   { name: 'REST APIs' },
-  { name: 'HTML5 & CSS3' },
-  { name: 'Figma' },
   { name: 'Git & GitHub' },
   { name: 'CI/CD' },
+  { name: 'C++' },
+  { name: 'TypeScript' },
+  { name: 'Tailwind CSS' },
+  { name: 'FastAPI' },
+  { name: 'RedwoodJS' },
 ];
 
 const Skills: React.FC = () => {

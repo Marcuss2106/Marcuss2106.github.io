@@ -67,16 +67,14 @@ const Header: React.FC = () => {
       <header className="fixed top-0 z-50 w-full bg-slate-900/90 backdrop-blur-md border-b border-slate-800/50">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-8 md:px-12 relative">
           <nav className="flex items-center justify-between h-20">
-            {/* Logo */}
             <a 
               href="#about" 
               onClick={(e) => { e.preventDefault(); scrollToSection('about');}} 
               className="text-2xl font-black text-white tracking-tighter z-50"
             >
-              JD<span className="text-purple-400">.</span>
+              MS<span className="text-purple-400">.</span>
             </a>
 
-            {/* Desktop Navigation */}
             <ul className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <li key={link.id}>
@@ -94,7 +92,6 @@ const Header: React.FC = () => {
               ))}
             </ul>
 
-            {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2 text-slate-300 hover:text-purple-400 focus:outline-none transition-colors duration-300"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -113,7 +110,6 @@ const Header: React.FC = () => {
             </button>
           </nav>
 
-          {/* Mobile Dropdown Menu */}
           <div 
             className={`absolute top-[5.5rem] right-6 sm:right-8 md:right-12 w-56 bg-slate-800 rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.3)] border border-slate-700 overflow-hidden transition-all duration-300 origin-top-right lg:hidden transform ${
               isMobileMenuOpen 
@@ -142,7 +138,6 @@ const Header: React.FC = () => {
         </div>
       </header>
 
-      {/* Backdrop Blur Overlay */}
       <div 
         className={`fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-40 transition-opacity duration-500 lg:hidden ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'

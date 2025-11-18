@@ -3,6 +3,7 @@ import React from 'react';
 import GithubIcon from './icons/GithubIcon';
 import LinkedinIcon from './icons/LinkedinIcon';
 import EmailIcon from './icons/EmailIcon';
+import ResumeIcon from './icons/ResumeIcon';
 
 const socialLinks = [
 	{
@@ -20,6 +21,11 @@ const socialLinks = [
 		url: 'mailto:marcuss2106@gmail.com',
 		icon: EmailIcon,
 	},
+	{
+		name: 'Resume',
+		url: 'https://1drv.ms/w/c/5f2e4e1c23409693/EaXVhptY9bRBuh09Fscdv_0BhEC8YhkffMGGUonXdvmI0Q?e=iZGfYm',
+		icon: ResumeIcon,
+	},
 ];
 
 const Connect: React.FC = () => {
@@ -29,7 +35,7 @@ const Connect: React.FC = () => {
         Connect With Me!
       </h2>
       <p className="max-w-md mx-auto mb-8 text-slate-400">
-        I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out!
+        I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out or view my resume!
       </p>
       <div className="flex justify-center items-center space-x-8">
         {socialLinks.map((link) => (

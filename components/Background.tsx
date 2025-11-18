@@ -29,14 +29,14 @@ const Background: React.FC = () => {
 
     const initStars = () => {
       stars = [];
-      const numStars = Math.floor((canvas.width * canvas.height) / 4000); // Density
+      const numStars = Math.floor((canvas.width * canvas.height) / 4000);
       
       for (let i = 0; i < numStars; i++) {
         stars.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           radius: Math.random() * 1.5,
-          alpha: Math.random() * 0.6 + 0.1, // More subtle alpha (0.1 to 0.7)
+          alpha: Math.random() * 0.6 + 0.1,
           speed: Math.random() * 0.2 + 0.05,
         });
       }
@@ -51,10 +51,8 @@ const Background: React.FC = () => {
         ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
         ctx.fill();
 
-        // Update position for parallax drift
         star.y -= star.speed;
         
-        // Reset if off screen
         if (star.y < 0) {
           star.y = canvas.height;
           star.x = Math.random() * canvas.width;
