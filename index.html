@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcus Sostak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-6ibmH3Vv.ico" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .glow-shadow {
+        box-shadow: 0 0 15px rgba(168, 85, 247, 0.4), 0 0 25px rgba(168, 85, 247, 0.2);
+      }
+      .glow-shadow-sm {
+        box-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+      }
+      
+      /* Star Background */
+      #star-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      /* Particle Animation */
+      @keyframes float-particle {
+        0% {
+          transform: translateY(0) scale(0);
+          opacity: 0;
+        }
+        20% {
+          opacity: 0.8;
+          transform: translateY(-10px) scale(1);
+        }
+        100% {
+          transform: translateY(-50px) scale(0);
+          opacity: 0;
+        }
+      }
+      
+      .animate-particle {
+        animation: float-particle 3s infinite linear;
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-CBbhKpBM.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CDYNpzGQ.css">
+</head>
+  <body class="bg-slate-900 text-slate-300 selection:bg-purple-500/30 selection:text-purple-200">
+    <div id="root"></div>
+  </body>
+</html>
