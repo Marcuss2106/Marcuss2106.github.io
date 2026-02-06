@@ -7,21 +7,50 @@ import GlowCard from './GlowCard';
 
 const projectData: Project[] = [
 	{
-		title: 'LocaLM',
+		title: 'Climbing Gym Hold Detection',
 		description:
-			'Developed a student-led startup in 24 hours for a local language model application enabling users to run and interact with custom models on their own machines without relying on external APIs.',
-		imageUrl: '/localm.png',
-		tags: ['React', 'PyTorch', 'Tailwind CSS', 'Vite'],
-		githubUrl: 'https://github.com/MichStew/locaLM',
-        liveUrl: 'https://localm-de7priduj-marcuss2106s-projects.vercel.app/',
+			'Developed a computer vision model to identify and classify climbing holds in gym images. Utilized YOLOv11 for object detection and Python for image processing, achieving high accuracy in diverse lighting and angle conditions.',
+		imageUrl: '/climbing_holds.jpg',
+		tags: ['PyTorch', 'YOLOv11', 'Python', 'Computer Vision', 'Matplotlib'],
+		githubUrl:
+			'https://github.com/Marcuss2106/indoor-climbing-gym-hold-classification',
+		liveUrl:
+			'https://www.linkedin.com/posts/marcus-sostak_computervision-deeplearning-machinelearning-activity-7415193765575061504-R3oV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFGvyaMBNmQASborZQ1qmZGZF6O7YtG7IJA',
 	},
 	{
 		title: 'Dialect Classifier App',
 		description:
-			'Developed a full-stack web app for real-time dialect classification, capturing microphone input and metadata. Built a data collection pieline supporting 500+ potential ML training samples, and a modular backend architecture containg preprocessing and feature extraction for future AI integration.',
+			'Deployed a full-stack web app for real-time dialect classification, capturing microphone input and metadata. Built a data collection pieline supporting 1000+ potential ML training samples, and a modular backend architecture containg preprocessing and feature extraction for future AI integration.',
 		imageUrl: '/accentme.png',
-		tags: ['React', 'Python', 'FastAPI', 'Supabase', 'PyTorch'],
+		tags: [
+			'React',
+			'Python',
+			'FastAPI',
+			'Docker',
+			'Supabase',
+			'Render',
+			'PyTorch',
+		],
+		githubUrl: 'https://github.com/Marcuss2106/dialect-classification-app',
+		liveUrl: 'https://dialect-classification-app.vercel.app/',
 	},
+	{
+		title: 'LocaLM',
+		description:
+			'Developed a student-led startup in 24 hours for a local language model application enabling users to run and interact with custom models on their own machines without relying on external APIs.',
+		imageUrl: '/localm.png',
+		tags: ['React', 'PyTorch', 'Tailwind CSS', 'Flask'],
+		githubUrl: 'https://github.com/MichStew/locaLM',
+		liveUrl: 'https://localm-de7priduj-marcuss2106s-projects.vercel.app/',
+	},
+    {
+        title: 'Common Voice Exploratory Dataset Analysis',
+        description:
+            'Conducted an exploratory data analysis on Mozilla\'s Common Voice dataset to extract insights on speaker demographics and accent distribution. Utilized data visualization techniques to present findings that inform future data collection strategies for improved model training.',
+        imageUrl: '/CV_Logo.png',
+        tags: ['Python', 'Pandas', 'Seaborn', 'Matplotlib', 'Jupyter'],
+        githubUrl: 'https://github.com/Marcuss2106/common-voice-eda',
+    },
 	{
 		title: 'GTZAN Binary Classification with Linear Models',
 		description:

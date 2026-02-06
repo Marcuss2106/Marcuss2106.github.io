@@ -7,15 +7,19 @@ const skillsData: Skill[] = [
   { name: 'Python' },
   { name: 'React' },
   { name: 'Java' },
+  { name: 'PyTorch'},
+  { name: 'TypeScript' },
+  { name: 'SQL' },
+  { name: 'Docker' },
+  { name: 'AWS' },
   { name: 'GraphQL' },
   { name: 'REST APIs' },
   { name: 'Git & GitHub' },
   { name: 'CI/CD' },
   { name: 'C++' },
-  { name: 'TypeScript' },
+  { name: 'JavaScript' },
   { name: 'Tailwind CSS' },
   { name: 'FastAPI' },
-  { name: 'RedwoodJS' },
 ];
 
 const Skills: React.FC = () => {

@@ -23,7 +23,7 @@ const socialLinks = [
 	},
 	{
 		name: 'Resume',
-		url: 'https://1drv.ms/w/c/5f2e4e1c23409693/EaXVhptY9bRBuh09Fscdv_0BhEC8YhkffMGGUonXdvmI0Q?e=iZGfYm',
+		url: 'https://drive.google.com/file/d/1_Qy5BfXnuWfmSPT7uLhMaAaAr6RZ5tqp/view?usp=sharing',
 		icon: ResumeIcon,
 	},
 ];

@@ -9,8 +9,8 @@ const experienceData: ExperienceItem[] = [
 		title: 'Research Assistant',
 		company: 'Wordification',
 		description:
-			'Developed an interactive word-learning platform using RedwoodJS, React, GraphQL, and Rive animations. Collaborated with a team to optimise usability, design, and data workflows. Authored documentation and proposed roadmap for AI-driven personalization, enabling dialect-aware features.',
-		tags: ['React', 'TypeScript', 'RedwoodJS', 'Tailwind CSS', 'Storybook', 'GraphQL', 'Rive'],
+			'Developed an interactive word-learning platform using RedwoodJS, React, GraphQL, and PostgreSQL. Collaborated with a team to optimise usability, design, and data workflows. Authored documentation and proposed roadmap for AI-driven personalization, enabling dialect-aware features.',
+		tags: ['React', 'TypeScript', 'RedwoodJS', 'Tailwind CSS', 'PostgreSQL', 'GraphQL', 'Rive Animations'],
 		liveUrl: 'https://wordification.scholastechnology.com/',
 	},
 ];
