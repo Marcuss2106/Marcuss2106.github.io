@@ -1,73 +1,112 @@
 import React from 'react';
-import type { ExperienceItem } from '../types';
-import GlowCard from './GlowCard';
+import { roles } from '../data/content';
+import SectionHeading from './SectionHeading';
+import Reveal from './Reveal';
+import SpotlightCard from './SpotlightCard';
 import ExternalLinkIcon from './icons/ExternalLinkIcon';
 
-const experienceData: ExperienceItem[] = [
-	{
-		date: 'May 2025 - Present',
-		title: 'Research Assistant',
-		company: 'Wordification',
-		description:
-			'Developed an interactive word-learning platform using RedwoodJS, React, GraphQL, and PostgreSQL. Collaborated with a team to optimise usability, design, and data workflows. Authored documentation and proposed roadmap for AI-driven personalization, enabling dialect-aware features.',
-		tags: ['React', 'TypeScript', 'RedwoodJS', 'Tailwind CSS', 'PostgreSQL', 'GraphQL', 'Rive Animations'],
-		liveUrl: 'https://wordification.scholastechnology.com/',
-	},
-];
+const Experience: React.FC = () => (
+	<section
+		id="experience"
+		className="scroll-mt-28 px-5 py-24 sm:px-8 sm:py-32"
+	>
+		<div className="mx-auto max-w-6xl">
+			<SectionHeading
+				index="03"
+				title="Experience"
+				kicker="Research, engineering, leadership"
+			/>
 
-const Experience: React.FC = () => {
-	return (
-		<section id="experience" className="scroll-mt-24">
-			<h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl mb-12">
-				Experience
-			</h2>
-			<div className="flex flex-col space-y-6">
-				{experienceData.map((item, index) => (
-					<GlowCard key={index} className="p-6 sm:p-8">
-						<div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
-							<header className="sm:w-1/4 shrink-0">
-								<span className="text-xs font-semibold uppercase tracking-wide text-slate-500 block mt-1">
-									{item.date}
-								</span>
-							</header>
-							<div className="sm:w-3/4">
-								<h3 className="text-lg font-medium text-slate-200 group-hover:text-purple-400 transition-colors duration-300">
-									{item.title} · {item.company}
-								</h3>
-								<p className="mt-2 text-sm leading-relaxed text-slate-400">
-									{item.description}
+			<div className="relative">
+				{/* timeline spine */}
+				<div
+					aria-hidden
+					className="absolute left-[7px] top-2 hidden h-full w-px bg-gradient-to-b from-iris-500 via-aqua-400/40 to-transparent sm:block"
+				/>
+
+				<ol className="space-y-6">
+					{roles.map((role, i) => (
+						<Reveal as="li" key={role.title} delay={i * 100} className="relative">
+							<span
+								aria-hidden
+								className="absolute left-0 top-8 hidden h-[15px] w-[15px] items-center justify-center rounded-full border border-iris-400/50 bg-ink-950 sm:flex"
+							>
+								<span className="h-[5px] w-[5px] rounded-full bg-iris-400 shadow-[0_0_10px_2px_rgba(139,92,246,0.8)]" />
+							</span>
+
+							<SpotlightCard className="p-6 sm:ml-10 sm:p-8">
+								<div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-2">
+									<div>
+										<div className="flex flex-wrap items-center gap-2.5">
+											<h3 className="font-display text-xl font-semibold tracking-tight text-white sm:text-2xl">
+												{role.title}
+											</h3>
+											{role.kind === 'leadership' && (
+												<span className="rounded-full border border-aqua-400/25 bg-aqua-400/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-aqua-300">
+													Leadership
+												</span>
+											)}
+										</div>
+										<p className="mt-1 flex flex-wrap items-center gap-x-2 text-sm text-iris-400">
+											{role.url ? (
+												<a
+													href={role.url}
+													target="_blank"
+													rel="noopener noreferrer"
+													className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline"
+												>
+													{role.org}
+													<ExternalLinkIcon className="h-3.5 w-3.5" />
+												</a>
+											) : (
+												role.org
+											)}
+											<span className="text-slate-600">·</span>
+											<span className="text-slate-500">{role.location}</span>
+										</p>
+									</div>
+
+									<span className="shrink-0 rounded-full border border-white/8 bg-white/[0.03] px-3 py-1 font-mono text-[11px] tracking-tight text-slate-400">
+										{role.period}
+									</span>
+								</div>
+
+								<p className="mt-4 text-[14.5px] leading-relaxed text-slate-300">
+									{role.summary}
 								</p>
-								<ul
-									className="mt-4 flex flex-wrap gap-2"
-									aria-label="Technologies used"
-								>
-									{item.tags.map((tag, tagIndex) => (
-										<li key={tagIndex}>
-											<div className="flex items-center rounded-full bg-purple-400/10 px-3 py-1 text-xs font-medium leading-5 text-purple-300">
-												{tag}
-											</div>
+
+								<ul className="mt-5 space-y-2.5">
+									{role.highlights.map((point) => (
+										<li
+											key={point}
+											className="flex gap-3 text-[14px] leading-relaxed text-slate-400"
+										>
+											<span
+												aria-hidden
+												className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-iris-500"
+											/>
+											{point}
 										</li>
 									))}
 								</ul>
-								<div className="flex items-center space-x-4 mt-6">
-									{item.liveUrl && (
-										<a
-											href={item.liveUrl}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="text-slate-400 hover:text-purple-400 transition-colors duration-300 z-20"
+
+								<ul className="mt-6 flex flex-wrap gap-2">
+									{role.tags.map((tag) => (
+										<li
+											key={tag}
+											className="rounded-md border border-white/8 bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] text-slate-400 transition-colors duration-300 hover:border-iris-400/30 hover:text-iris-400"
 										>
-											<ExternalLinkIcon className="w-5 h-5" />
-										</a>
-									)}
-								</div>
-							</div>
-						</div>
-					</GlowCard>
-				))}
+											{tag}
+										</li>
+									))}
+								</ul>
+							</SpotlightCard>
+						</Reveal>
+					))}
+				</ol>
 			</div>
-		</section>
-	);
-};
+		</div>
+	</section>
+);
 
 export default Experience;
