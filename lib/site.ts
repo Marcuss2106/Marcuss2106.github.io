@@ -402,7 +402,7 @@ export function initSite(): void {
   const cards = gsap.utils.toArray('.card');
   cards.forEach((c, i) => {
     if (i === cards.length - 1) return;
-    gsap.to(c, { scale: 0.94, filter: 'brightness(0.55)', ease: 'none', scrollTrigger: { trigger: cards[i + 1], start: 'top 85%', end: 'top 20%', scrub: true } });
+    gsap.to(c, { scale: 0.96, filter: 'brightness(0.7)', ease: 'none', scrollTrigger: { trigger: cards[i + 1], start: 'top 60%', end: 'top 18%', scrub: true } });
   });
 
   gsap.utils.toArray('.lrow .role').forEach(r => gsap.fromTo(r, { fontVariationSettings: '"wdth" 62' }, { fontVariationSettings: '"wdth" 100', ease: 'none', scrollTrigger: { trigger: r, start: 'top 95%', end: 'top 55%', scrub: true } }));
