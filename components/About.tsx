@@ -1,88 +1,21 @@
-import React from 'react';
-import { about, profile } from '../data/content';
-import SectionHeading from './SectionHeading';
-import Reveal from './Reveal';
-import SpotlightCard from './SpotlightCard';
-
-const About: React.FC = () => (
-	<section id="about" className="scroll-mt-28 px-5 py-24 sm:px-8 sm:py-32">
-		<div className="mx-auto max-w-6xl">
-			<SectionHeading index="02" title="About" kicker="Who you'd be hiring" />
-
-			<div className="grid gap-12 lg:grid-cols-[1.35fr_1fr] lg:gap-16">
-				<div>
-					<Reveal>
-						<p className="font-display text-2xl font-medium leading-snug tracking-tight text-white sm:text-[1.75rem]">
-							{about.lede}
-						</p>
-					</Reveal>
-
-					<div className="mt-8 space-y-5 text-[15px] leading-relaxed text-slate-400">
-						{about.paragraphs.map((para, i) => (
-							<Reveal key={i} delay={i * 90}>
-								<p>{para}</p>
-							</Reveal>
-						))}
-					</div>
-
-					<Reveal delay={280}>
-						<div className="mt-9 flex flex-wrap gap-2.5">
-							{[profile.clearance, profile.degree, `Class of 2028`].map(
-								(chip) => (
-									<span
-										key={chip}
-										className="rounded-full border border-iris-500/25 bg-iris-500/10 px-3.5 py-1.5 text-xs font-medium text-iris-400"
-									>
-										{chip}
-									</span>
-								)
-							)}
-						</div>
-					</Reveal>
-				</div>
-
-				<div className="space-y-4">
-					<Reveal delay={120}>
-						<SpotlightCard className="p-6" tilt>
-							<h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500">
-								Fast facts
-							</h3>
-							<dl className="mt-5 space-y-3.5">
-								{about.facts.map((fact) => (
-									<div
-										key={fact.label}
-										className="flex items-baseline justify-between gap-4 border-b border-white/5 pb-3.5 last:border-0 last:pb-0"
-									>
-										<dt className="text-[13px] text-slate-500">{fact.label}</dt>
-										<dd className="text-right text-[13.5px] font-medium text-slate-200">
-											{fact.value}
-										</dd>
-									</div>
-								))}
-							</dl>
-						</SpotlightCard>
-					</Reveal>
-
-					<Reveal delay={200}>
-						<SpotlightCard className="overflow-hidden p-0">
-							<img
-								src="/climbing_holds.jpg"
-								alt="Indoor climbing wall with colored holds"
-								loading="lazy"
-								decoding="async"
-								className="h-44 w-full object-cover opacity-70 transition-all duration-700 group-hover:scale-105 group-hover:opacity-90"
-							/>
-							<div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/40 to-transparent" />
-							<p className="absolute bottom-4 left-5 right-5 text-[13px] text-slate-300">
-								<span className="font-medium text-white">Off the clock:</span>{' '}
-								climbing — which is how the hold-detection model started.
-							</p>
-						</SpotlightCard>
-					</Reveal>
-				</div>
-			</div>
-		</div>
+// Pinned four-screen About plate. Figures are drawn on #fcan by lib/site.ts.
+export default function About() {
+	return (
+	<section className="fields" id="fields">
+	  <div className="f-stage" id="fstage" data-phase="0">
+	    <div className="f-left pad">
+	      <div className="k mono"><span>About</span><span id="ffig">Columbia, SC</span></div>
+	      <div className="f-words"><h2 className="fw intro on">Hello</h2><h2 className="fw">Quantum</h2><h2 className="fw">Vision</h2><h2 className="fw">Learning</h2></div>
+	      <div className="f-caps">
+	        <p className="big on">I study computer science at the University of South Carolina, with an AI concentration and a math minor, and do machine learning research at ARLIS, University of Maryland. I build ML that has to work <span>outside the notebook</span>.</p>
+	        <p>I won IBM Qiskit Fall Fest 2026 with QeMCMC, quantum-enhanced Markov chain Monte Carlo: a quantum circuit proposes the moves for a sampler that builds long–short portfolios of real ETFs and stocks. This sphere is one qubit; the readout gives its odds of measuring 1.</p>
+	        <p>I climb a few times a week, so I trained a detector for climbing holds. Under every detector is a filter like this one: Sobel edges, running on the wall photo in your browser.</p>
+	        <p>Now I do machine learning research at ARLIS, University of Maryland: feature extraction and multimodal embeddings, where images and text share one space. Here, 16 image–text pairs train live with a contrastive loss until each pair lines up.</p>
+	      </div>
+	      <div className="f-ticks" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
+	    </div>
+	    <div className="f-fig" aria-hidden="true"><canvas id="fcan"></canvas><div className="f-read mono" id="fread"></div></div>
+	  </div>
 	</section>
-);
-
-export default About;
+	);
+}

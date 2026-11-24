@@ -1,35 +1,39 @@
-import React from 'react';
-import Background from './components/Background';
-import ScrollProgress from './components/ScrollProgress';
-import Nav from './components/Nav';
+import { useEffect } from 'react';
+import Bar from './components/Bar';
 import Hero from './components/Hero';
-import Marquee from './components/Marquee';
 import About from './components/About';
+import Work from './components/Work';
+import Wins from './components/Wins';
+import Spec from './components/Spec';
 import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Stack from './components/Stack';
+import Leadership from './components/Leadership';
+import Tools from './components/Tools';
+import MoreProjects from './components/MoreProjects';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { initSite } from './lib/site';
 
-const App: React.FC = () => (
-	<div className="relative min-h-screen antialiased">
-		<Background />
-		<ScrollProgress />
-		<Nav />
+// The page is static markup. All motion, canvases and scroll choreography live in lib/site.ts,
+// which runs once after the first render.
+export default function App() {
+	useEffect(() => {
+		initSite();
+	}, []);
 
-		<div className="relative z-10">
-			<main>
+	return (
+		<>
+			<Bar />
+			<main id="top">
 				<Hero />
-				<Marquee />
 				<About />
+				<Work />
+				<Wins />
+				<Spec />
 				<Experience />
-				<Projects />
-				<Stack />
+				<Leadership />
+				<Tools />
+				<MoreProjects />
 				<Contact />
 			</main>
-			<Footer />
-		</div>
-	</div>
-);
-
-export default App;
+		</>
+	);
+}
