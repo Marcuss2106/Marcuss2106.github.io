@@ -56,9 +56,9 @@ export function initSite(): void {
   })();
 
 
-  // Motion: follows the OS "reduce motion" setting unless the visitor picks otherwise with the button in the bar.
+  // Motion: full by default. Visitors can switch to reduced motion with the button in the bar (remembered per browser).
   let saved = null; try { saved = localStorage.getItem('motion'); } catch (e) {}
-  const RM = saved ? saved === 'off' : matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const RM = saved === 'off';
   document.documentElement.classList.toggle('rm', RM);
   $('motion').textContent = RM ? 'Motion: reduced' : 'Motion: full';
   $('motion').addEventListener('click', () => { try { localStorage.setItem('motion', RM ? 'on' : 'off'); } catch (e) {} location.reload(); });
